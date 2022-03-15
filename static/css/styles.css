@@ -1,0 +1,143 @@
+/* body{
+    margin: 0;
+} */
+
+.header{
+    width: 100%;
+    border-bottom: 2px solid #261a03;
+    height: auto;
+    color: #261a03;
+    background-color: #deb420;
+    display: flex;
+}
+.box{
+    width: 25%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 1px solid blue;
+}
+
+.logo{
+    width: 70%;
+    object-fit: cover;
+    height: auto;
+}
+
+.cont-title-menu{
+    width: 75%;
+/*     background-image: url("../image/banner2.jpg");
+    background-size: cover;
+    background-position: 250px;
+    background-position-y:center; */
+}
+
+.title{
+    width: 100%;
+    height: 50%;
+    border: 1px solid blue;
+}
+
+.menu{
+    width: 100%;
+    margin-right: 5px;
+    display: inline;
+    /*border: 1px solid red;*/
+}
+
+.titulo{
+    /* font-style: italic; */
+    font-weight: bold;
+    font-size: 80px;
+}
+/* /////////////CONTENIDO//////////////////// */
+#content{
+    float: left;
+    width: 75%;
+    /* background:#deb420; */
+    min-height: 500px;
+}
+
+.wrapper {
+    display: grid;
+    margin-top: 50px;
+    grid-template-columns: 100px 100px 100px;
+    grid-gap: 40px;
+    color: #444;
+}
+
+.caja {
+    /*     background-color: #444; */
+    border: 1px #261a03;
+    color: #261a03;
+    border-radius: 10px;
+    padding: 20px;
+    font-size: 150%;
+}
+
+footer{
+    background:#261a03;
+    color:#deb420;
+    text-align: center;
+    height: 50px;
+    line-height: 50px;
+}
+
+/* PRODUCTO HTML */
+
+#container{
+    width: 100%;
+    margin: 0px auto;
+    border: 1px solid black;
+}
+
+.cont-logo{
+    width:25%;
+    display:flex;
+    border: 1px solid black;
+}
+
+/* //////////////////LATERAL////////////////// */
+
+.clearfix{
+    clear:both;
+}
+
+aside{
+    float:right;
+    /* display:flex; */
+    text-align: center;
+    /* position: relative; */
+    width: 25%;
+    background: #deb420;
+}
+
+/* //////////////////TABLA////////////////// */
+
+#main{
+    display: flex;
+    flex-direction: row-reverse;
+    color: #261a03;
+    font-size: 20px;
+    width: 100%;
+}
+
+#main table{
+    position: relative;
+    text-align:justify;
+}
+
+#main img{
+    /* position: relative; */
+     /* display: inline-block; */
+     width: 50%;
+     text-align: center;
+     border: 1px solid red;
+}
+
+#main span{
+    position: absolute;
+    font-size: 20px;
+    color: #261a03;
+    background-color: #deb420;
+}
