@@ -1,6 +1,6 @@
-/* body{
-    margin: 0;
-} */
+body{
+    margin: 20px;
+}
 
 .header{
     width: 100%;
@@ -19,7 +19,8 @@
 }
 
 .logo{
-    width: 70%;
+    /* width: 70%; */
+    width: 250px;
     object-fit: cover;
     height: auto;
 }
@@ -75,13 +76,6 @@
     font-size: 150%;
 }
 
-footer{
-    background:#261a03;
-    color:#deb420;
-    text-align: center;
-    height: 50px;
-    line-height: 50px;
-}
 
 /* PRODUCTO HTML */
 
@@ -105,11 +99,10 @@ footer{
 
 aside{
     float:right;
-    /* display:flex; */
+    border-left: 1px solid #261a03;
     text-align: center;
-    /* position: relative; */
     width: 25%;
-    background: #deb420;
+    /* background: #deb420; */
 }
 
 /* //////////////////TABLA////////////////// */
@@ -124,12 +117,21 @@ aside{
 
 #main table{
     position: relative;
-    text-align:justify;
+    margin-bottom: 15px;
+    text-align:justify;/* 
+    background-image: url("../image/backgr.png");
+    background-repeat: repeat; */
 }
+
+#main table td{
+    text-align: center;
+    padding: 0px;
+}
+/* td:hover {background-color: #deb420;} */
 
 #main img{
     /* position: relative; */
-     /* display: inline-block; */
+     display: inline-block;
      width: 50%;
      text-align: center;
      border: 1px solid red;
@@ -139,5 +141,28 @@ aside{
     position: absolute;
     font-size: 20px;
     color: #261a03;
-    background-color: #deb420;
+    display: flex;
+    justify-content: baseline;
+/*     background-color: #deb420;
+ */}
+
+/* //////////////////PIE DE PAGINA////////////////// */
+
+footer{
+    background:#261a03;
+    color:#deb420;
+    height: 50px;
+    line-height: 50px;
+}
+
+.contacto{
+    display: flex;
+    margin-right: 5px;
+    justify-content: flex-end;
+}
+
+.derechos{
+    text-align: center;
+    font-size: 14px;
+    color: #261a03;
 }
