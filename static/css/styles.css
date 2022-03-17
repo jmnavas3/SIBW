@@ -1,27 +1,28 @@
 body{
-    margin: 20px;
+    /* margin: 20px; */
+    margin: auto;
+    width: 1900px;
+    height: 1080px;
+    transform: scale(1);
 }
+
+a:link{
+    text-decoration: none;
+}
+
+/*------------------------HEADER------------------------- */
 
 .header{
     width: 100%;
-    border-bottom: 2px solid #261a03;
+    border-bottom: 10px solid #261a03;
     height: auto;
     color: #261a03;
     background-color: #deb420;
     display: flex;
 }
-.box{
-    width: 25%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    border: 1px solid blue;
-}
 
 .logo{
-    /* width: 70%; */
     width: 250px;
-    object-fit: cover;
     height: auto;
 }
 
@@ -33,77 +34,47 @@ body{
     background-position-y:center; */
 }
 
-.title{
-    width: 100%;
-    height: 50%;
-    border: 1px solid blue;
+.titulo{
+    font-style: italic;
+    font-weight: bold;
+    margin-left: 30px;
+    font-size: 90px;
 }
 
 .menu{
     width: 100%;
     margin-right: 5px;
+    font-size: 20px;
     display: inline;
-    /*border: 1px solid red;*/
 }
 
-.titulo{
-    /* font-style: italic; */
-    font-weight: bold;
-    font-size: 80px;
-}
 /* /////////////CONTENIDO//////////////////// */
-#content{
-    float: left;
-    width: 75%;
-    /* background:#deb420; */
-    min-height: 500px;
-}
-
-.wrapper {
-    display: grid;
-    margin-top: 50px;
-    grid-template-columns: 100px 100px 100px;
-    grid-gap: 40px;
-    color: #444;
-}
-
-.caja {
-    /*     background-color: #444; */
-    border: 1px #261a03;
-    color: #261a03;
-    border-radius: 10px;
-    padding: 20px;
-    font-size: 150%;
-}
-
-
-/* PRODUCTO HTML */
-
-#container{
-    width: 100%;
-    margin: 0px auto;
-    border: 1px solid black;
-}
-
-.cont-logo{
-    width:25%;
-    display:flex;
-    border: 1px solid black;
-}
-
-/* //////////////////LATERAL////////////////// */
-
 .clearfix{
     clear:both;
 }
 
+/* //////////////////LATERAL////////////////// */
+
 aside{
     float:right;
-    border-left: 1px solid #261a03;
-    text-align: center;
-    width: 25%;
-    /* background: #deb420; */
+    border-left: 4px solid #261a03;
+    width: 200px;
+    padding: 0%;
+    color: #261a03;
+    margin: 0%;
+    background: #deb420;
 }
+
+aside h2{
+    text-align: start;
+    margin-left: 15px;
+}
+
+aside li p{
+    margin-left: -20px;
+    color: #261a03;
+}
+aside li p:hover{background-color:#b5972d; color: white}
 
 /* //////////////////TABLA////////////////// */
 
@@ -112,7 +83,8 @@ aside{
     flex-direction: row-reverse;
     color: #261a03;
     font-size: 20px;
-    width: 100%;
+    width: auto;
+    height: auto;
 }
 
 #main table{
@@ -132,20 +104,22 @@ aside{
 #main img{
     /* position: relative; */
      display: inline-block;
+     margin-top: 20px;
      width: 50%;
      text-align: center;
-     border: 1px solid red;
+     border-top: 2px solid #261a03;
 }
 
 #main span{
     position: absolute;
     font-size: 20px;
     color: #261a03;
-    display: flex;
+    /* display: contents; */
     justify-content: baseline;
-/*     background-color: #deb420;
- */}
-
+}
+    /* HOVERS: para destacar el texto y la imagen de cada producto al pasar el ratón por encima */
+/* #main img:hover{width: 60%;} */
+#main span:hover{color: rgb(106, 84, 31); font-size: 24px;}
 /* //////////////////PIE DE PAGINA////////////////// */
 
 footer{
