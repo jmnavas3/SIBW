@@ -1,7 +1,7 @@
 body{
     /* margin: 20px; */
     margin: auto;
-    width: 1900px;
+    width: 1903px;
     height: 1080px;
     transform: scale(1);
 }
@@ -113,19 +113,20 @@ aside li p:hover{background-color:#b5972d; color: white}
 #main span{
     position: absolute;
     font-size: 20px;
+    margin-left: 66px;
     color: #261a03;
     /* display: contents; */
     justify-content: baseline;
 }
     /* HOVERS: para destacar el texto y la imagen de cada producto al pasar el ratón por encima */
-/* #main img:hover{width: 60%;} */
-#main span:hover{color: rgb(106, 84, 31); font-size: 24px;}
+#main img:hover{border: 2px solid #261a03; width: 45%;}
+#main span:hover{color: #deb420; background-color: #261a03; font-size: 24px;}
 /* //////////////////PIE DE PAGINA////////////////// */
 
 footer{
     background:#261a03;
     color:#deb420;
-    height: 50px;
+    height: 116px;
     line-height: 50px;
 }
 
@@ -137,6 +138,6 @@ footer{
 
 .derechos{
     text-align: center;
-    font-size: 14px;
-    color: #261a03;
+    font-size: 16px;
+    color: #deb420;
 }
