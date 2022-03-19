@@ -43,7 +43,7 @@ a:link{
 
 .menu{
     width: 100%;
-    margin-right: 5px;
+    margin-right: 50px;
     font-size: 20px;
     display: inline;
 }
@@ -59,6 +59,7 @@ aside{
     float:right;
     border-left: 4px solid #261a03;
     width: 200px;
+    height: 100%;
     padding: 0%;
     color: #261a03;
     margin: 0%;
@@ -70,12 +71,22 @@ aside h2{
     margin-left: 15px;
 }
 
+aside ul{
+    list-style: none outside none;
+}
+
 aside li p{
     margin-left: -20px;
     color: #261a03;
 }
 aside li p:hover{background-color:#b5972d; color: white}
 
+.marcas{
+    display: flex;
+    flex-direction: column;
+    width: 70%;
+    margin-left: 10px;
+}
 /* //////////////////TABLA////////////////// */
 
 #main{
@@ -88,20 +99,13 @@ aside li p:hover{background-color:#b5972d; color: white}
 }
 
 #main table{
-    position: relative;
-    margin-bottom: 15px;
-    text-align:justify;/* 
-    background-image: url("../image/backgr.png");
+    text-align: center;
+    /* background-image: url("../image/backgr.png");
     background-repeat: repeat; */
 }
 
-#main table td{
-    text-align: center;
-    padding: 0px;
-}
-/* td:hover {background-color: #deb420;} */
 
-#main img{
+#main table img{
     /* position: relative; */
      display: inline-block;
      margin-top: 20px;
@@ -119,7 +123,7 @@ aside li p:hover{background-color:#b5972d; color: white}
     justify-content: baseline;
 }
     /* HOVERS: para destacar el texto y la imagen de cada producto al pasar el ratón por encima */
-#main img:hover{border: 2px solid #261a03; width: 45%;}
+#main table img:hover{border: 1px solid #261a03; /* width: 45%; */}
 #main span:hover{color: #deb420; background-color: #261a03; font-size: 24px;}
 /* //////////////////PIE DE PAGINA////////////////// */
 

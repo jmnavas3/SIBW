@@ -1,14 +1,170 @@
-
-/* PRODUCTO HTML */
-
-#container{
-    width: 100%;
-    margin: 0px auto;
-    border: 1px solid black;
+body{
+    /* margin: 20px; */
+    margin: auto;
+    width: 1903px;
+    height: 1080px;
+    transform: scale(1);
 }
 
-.cont-logo{
-    width:25%;
-    display:flex;
-    border: 1px solid black;
+a:link{
+    text-decoration: none;
+}
+
+a > img{
+    width: 100%;
+}
+/*------------------------HEADER------------------------- */
+
+.header{
+    width: 100%;
+    border-bottom: 10px solid #261a03;
+    height: auto;
+    color: #261a03;
+    background-color: #deb420;
+    display: flex;
+}
+
+.logo{
+    width: 250px;
+    height: auto;
+}
+
+.cont-title-menu{
+    width: 75%;
+/*     background-image: url("../image/banner2.jpg");
+    background-size: cover;
+    background-position: 250px;
+    background-position-y:center; */
+}
+
+.titulo{
+    font-style: italic;
+    font-weight: bold;
+    margin-left: 30px;
+    font-size: 90px;
+}
+
+.menu{
+    width: 100%;
+    margin-right: 50px;
+    font-size: 20px;
+    display: inline;
+}
+
+/* /////////////CONTENIDO//////////////////// */
+.clearfix{
+    clear:both;
+}
+
+/* //////////////////LATERAL////////////////// */
+
+aside{
+    float:right;
+    border-left: 4px solid #261a03;
+    width: 200px;
+    height: 100%;
+    padding: 0%;
+    color: #261a03;
+    margin: 0%;
+    background: #deb420;
+}
+
+aside h2{
+    margin-left: 10px;
+    margin-bottom: 5px;
+    font-size: 30px;
+}
+
+ul{
+    list-style: none outside none;
+}
+
+aside li p{
+    margin-left: -20px;
+    margin-block: 2px;
+    font-size: 25px;
+    color: #261a03;
+}
+aside li p:hover{background-color:#b5972d; color: white}
+
+.marcas{
+    display: flex;
+    flex-direction: column;
+    width: 60%;
+    margin-block: 0px;
+    margin-left: 10px;
+    margin-top: -40px;
+}
+
+/* //////////////////PRODUCTO////////////////// */
+
+#main{
+    display: inline;
+    color: #261a03;
+    font-size: 20px;
+    width: auto;
+    height: auto;
+}
+
+#main #info{
+    display: flex;
+    justify-content: space-around;
+}
+
+.detalles *{
+    margin-block-start: 10px;
+    margin-block-end: -5px;
+    margin-left: 25px;
+}
+
+#main .detalles{
+    padding: 0px;
+    font-size: 35px;
+    margin-block-end:0%;
+    margin-block-start: 0%;
+}
+
+
+#main #info img{
+    width: 350px;
+    height: 350px;
+}
+
+.img-cont{
+    text-align: center;
+    font-style: italic;
+}
+    /* aumentar tamaño de imagen al pasar por ella */
+/* #main #info img:hover{
+    width: 400px;
+    height: 400px;
+} */
+
+#main span{
+    position: absolute;
+    font-size: 20px;
+    margin-left: 66px;
+    color: #261a03;
+    /* display: contents; */
+    justify-content: baseline;
+}
+/* //////////////////PIE DE PAGINA////////////////// */
+
+footer{
+    background:#261a03;
+    color:#deb420;
+    height: 116px;
+    line-height: 50px;
+}
+
+.contacto{
+    display: flex;
+    margin-right: 5px;
+    justify-content: flex-end;
+}
+
+.derechos{
+    text-align: center;
+    font-size: 16px;
+    color: #deb420;
 }
