@@ -61,10 +61,8 @@ aside{
     border-left: 4px solid #261a03;
     border-bottom: 4px solid #261a03;
     width: 200px;
-    height: 100%;
-    padding: 0%;
+    height: auto;
     color: #261a03;
-    margin: 0%;
     background: #deb420;
 }
 
@@ -121,10 +119,9 @@ aside li p:hover{background-color:#b5972d; color: white}
 
 #main table img{
      margin-top: 20px;
-     width: 60%;
+     width: 50%;
      border-top: 3px solid #261a03;
 }
-#main table img:hover{width: 90%;}
 
 #main span{
     position: absolute;
