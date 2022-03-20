@@ -1,16 +1,18 @@
 body{
-    /* margin: 20px; */
     margin: auto;
-    width: 1903px;
-    height: 1080px;
     transform: scale(1);
+    background-color: #150f05;
 }
 
 a:link{
     text-decoration: none;
 }
 
-/*------------------------HEADER------------------------- */
+a:visited{ color: #261a03;}
+
+/*////////////////////////////////////////////////////*/
+/*//////////////////// HEADER ////////////////////// */
+/*//////////////////////////////////////////////////*/
 
 .header{
     width: 100%;
@@ -27,11 +29,7 @@ a:link{
 }
 
 .cont-title-menu{
-    width: 75%;
-/*     background-image: url("../image/banner2.jpg");
-    background-size: cover;
-    background-position: 250px;
-    background-position-y:center; */
+    width: auto;
 }
 
 .titulo{
@@ -41,23 +39,27 @@ a:link{
     font-size: 90px;
 }
 
-.menu{
+.menu li{
     width: 100%;
     margin-right: 50px;
     font-size: 20px;
     display: inline;
 }
 
-/* /////////////CONTENIDO//////////////////// */
 .clearfix{
     clear:both;
 }
 
-/* //////////////////LATERAL////////////////// */
+
+
+/*////////////////////////////////////////////////////*/
+/* //////////////////// LATERAL //////////////////// */
+/*//////////////////////////////////////////////////*/
 
 aside{
     float:right;
     border-left: 4px solid #261a03;
+    border-bottom: 4px solid #261a03;
     width: 200px;
     height: 100%;
     padding: 0%;
@@ -67,32 +69,46 @@ aside{
 }
 
 aside h2{
-    text-align: start;
-    margin-left: 15px;
+    margin-left: 10px;
+    margin-bottom: 5px;
+    font-size: 30px;
 }
 
-aside ul{
+ul{
     list-style: none outside none;
 }
 
 aside li p{
     margin-left: -20px;
+    margin-block: 2px;
+    font-size: 25px;
     color: #261a03;
 }
 aside li p:hover{background-color:#b5972d; color: white}
 
+.marcas img{
+    width: 100%;
+}
+
 .marcas{
     display: flex;
     flex-direction: column;
-    width: 70%;
+    width: 60%;
+    margin-block: 0px;
     margin-left: 10px;
+    margin-top: -40px;
 }
-/* //////////////////TABLA////////////////// */
+
+
+
+/*/////////////////////////////////////////////////////*/
+/* ///////////////////// TABLA ////////////////////// */
+/*///////////////////////////////////////////////////*/
 
 #main{
     display: flex;
     flex-direction: row-reverse;
-    color: #261a03;
+    color:#deb420;
     font-size: 20px;
     width: auto;
     height: auto;
@@ -100,48 +116,91 @@ aside li p:hover{background-color:#b5972d; color: white}
 
 #main table{
     text-align: center;
-    /* background-image: url("../image/backgr.png");
-    background-repeat: repeat; */
 }
 
 
 #main table img{
-    /* position: relative; */
-     display: inline-block;
      margin-top: 20px;
-     width: 50%;
-     text-align: center;
-     border-top: 2px solid #261a03;
+     width: 60%;
+     border-top: 3px solid #261a03;
 }
+#main table img:hover{width: 90%;}
 
 #main span{
     position: absolute;
+    color: #deb420;
+}
+
+
+/*////////////////////////////////////////////////////////*/
+/*///////////////////////  PRODUCTO  ////////////////////*/
+/*//////////////////////////////////////////////////////*/
+
+#producto{
+    display: inline;
+    color: #deb420;
+    font-size: 20px;
+    width: auto;
+    height: auto;
+}
+
+#producto #info{
+    display: flex;
+}
+
+.detalles *{
+    margin-block-start: 10px;
+    margin-block-end: -5px;
+    margin-left: 25px;
+}
+
+#producto .detalles{
+    padding: 0px;
+    margin-block-end:15px;
+    margin-block-start: 0%;
+}
+
+
+#producto #info img{
+    width: 200px;
+}
+
+.img-cont{
+    text-align: center;
+    font-style: italic;
+}
+
+#producto span{
+    position: absolute;
     font-size: 20px;
     margin-left: 66px;
-    color: #261a03;
-    /* display: contents; */
     justify-content: baseline;
 }
-    /* HOVERS: para destacar el texto y la imagen de cada producto al pasar el ratón por encima */
-#main table img:hover{border: 1px solid #261a03; /* width: 45%; */}
-#main span:hover{color: #deb420; background-color: #261a03; font-size: 24px;}
-/* //////////////////PIE DE PAGINA////////////////// */
 
+
+
+/*/////////////////////////////////////////////////////*/
+/* ////////////////// PIE DE PAGINA //////////////////*/
+/*///////////////////////////////////////////////////*/
 footer{
-    background:#261a03;
-    color:#deb420;
-    height: 116px;
+    color:#261a03;
+    background:#deb420;
+    height: auto;
+    display: grid;
     line-height: 50px;
 }
 
 .contacto{
     display: flex;
-    margin-right: 5px;
-    justify-content: flex-end;
+    margin-left: 25px;
+    font-size: 20px;
+    justify-content: flex-start;
+    align-items: flex-start;
 }
 
 .derechos{
     text-align: center;
-    font-size: 16px;
-    color: #deb420;
+    margin-top: -40px;
+    font-size: 25px;
+    color: #261a03;
 }

@@ -1,8 +1,7 @@
 body{
-    /* margin: 20px; */
     margin: auto;
-    width: 1903px;
-    height: 1080px;
+    width: 2480;
+    height: 3508;
     transform: scale(1);
 }
 
@@ -24,31 +23,39 @@ a > img{
     display: flex;
 }
 
+.imp-header{
+    width: 100%;
+    border-bottom: 5px solid #261a03;
+    height: auto;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+
 .logo{
     width: 250px;
     height: auto;
 }
 
+.cont-title{
+    margin-block: -50px;
+}
+
 .cont-title-menu{
-    width: 75%;
-/*     background-image: url("../image/banner2.jpg");
-    background-size: cover;
-    background-position: 250px;
-    background-position-y:center; */
+    width: auto;
 }
 
 .titulo{
     font-style: italic;
     font-weight: bold;
-    margin-left: 30px;
     font-size: 90px;
 }
-
-.menu{
+    /* OCULTAMOS EL MENU DEL HEADER */
+.menu li{
     width: 100%;
     margin-right: 50px;
     font-size: 20px;
-    display: inline;
+    display: none;
 }
 
 /* /////////////CONTENIDO//////////////////// */
@@ -58,8 +65,10 @@ a > img{
 
 /* //////////////////LATERAL////////////////// */
 
+    /* OCULTAMOS LA BARRA LATERAR CON DISPLAY NONE */
 aside{
     float:right;
+    display: none;
     border-left: 4px solid #261a03;
     width: 200px;
     height: 100%;
@@ -98,7 +107,7 @@ aside li p:hover{background-color:#b5972d; color: white}
 
 /* //////////////////PRODUCTO////////////////// */
 
-#main{
+#producto{
     display: inline;
     color: #261a03;
     font-size: 20px;
@@ -106,7 +115,7 @@ aside li p:hover{background-color:#b5972d; color: white}
     height: auto;
 }
 
-#main #info{
+#producto #info{
     display: flex;
     justify-content: space-around;
 }
@@ -117,15 +126,15 @@ aside li p:hover{background-color:#b5972d; color: white}
     margin-left: 25px;
 }
 
-#main .detalles{
+#producto .detalles{
     padding: 0px;
-    font-size: 35px;
+    font-size: auto;
     margin-block-end:0%;
     margin-block-start: 0%;
 }
 
 
-#main #info img{
+#producto #info img{
     width: 350px;
     height: 350px;
 }
@@ -134,37 +143,29 @@ aside li p:hover{background-color:#b5972d; color: white}
     text-align: center;
     font-style: italic;
 }
-    /* aumentar tamaño de imagen al pasar por ella */
-/* #main #info img:hover{
-    width: 400px;
-    height: 400px;
-} */
 
-#main span{
+#producto span{
     position: absolute;
     font-size: 20px;
     margin-left: 66px;
     color: #261a03;
-    /* display: contents; */
     justify-content: baseline;
 }
 /* //////////////////PIE DE PAGINA////////////////// */
 
 footer{
-    background:#261a03;
-    color:#deb420;
-    height: 116px;
-    line-height: 50px;
+    height: auto;
 }
 
+/* OCULTAMOS LAS REDES SOCIALES */
 .contacto{
-    display: flex;
-    margin-right: 5px;
+    display: none;
+    margin-right: 15px;
+    font-size: 20px;
     justify-content: flex-end;
 }
 
 .derechos{
     text-align: center;
-    font-size: 16px;
-    color: #deb420;
+    font-size: 25px;
 }
