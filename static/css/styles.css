@@ -1,0 +1,203 @@
+body{
+    margin: auto;
+    transform: scale(1);
+    background-color: #150f05;
+}
+
+a:link{
+    text-decoration: none;
+}
+
+a:visited{ color: #261a03;}
+
+/*////////////////////////////////////////////////////*/
+/*//////////////////// HEADER ////////////////////// */
+/*//////////////////////////////////////////////////*/
+
+.header{
+    width: 100%;
+    border-bottom: 10px solid #261a03;
+    height: auto;
+    color: #261a03;
+    background-color: #deb420;
+    display: flex;
+}
+
+.logo{
+    width: 250px;
+    height: auto;
+}
+
+.cont-title-menu{
+    width: auto;
+}
+
+.titulo{
+    font-style: italic;
+    font-weight: bold;
+    margin-left: 30px;
+    font-size: 90px;
+}
+
+.menu li{
+    width: 100%;
+    margin-right: 50px;
+    font-size: 20px;
+    display: inline;
+}
+
+.clearfix{
+    clear:both;
+}
+
+
+
+/*////////////////////////////////////////////////////*/
+/* //////////////////// LATERAL //////////////////// */
+/*//////////////////////////////////////////////////*/
+
+aside{
+    float:right;
+    border-left: 4px solid #261a03;
+    border-bottom: 4px solid #261a03;
+    width: 200px;
+    height: auto;
+    color: #261a03;
+    background: #deb420;
+}
+
+aside h2{
+    margin-left: 10px;
+    margin-bottom: 5px;
+    font-size: 30px;
+}
+
+ul{
+    list-style: none outside none;
+}
+
+aside li p{
+    margin-left: -20px;
+    margin-block: 2px;
+    font-size: 25px;
+    color: #261a03;
+}
+aside li p:hover{background-color:#b5972d; color: white}
+
+.marcas img{
+    width: 100%;
+}
+
+.marcas{
+    display: flex;
+    flex-direction: column;
+    width: 60%;
+    margin-block: 0px;
+    margin-left: 10px;
+    margin-top: -40px;
+}
+
+
+
+/*/////////////////////////////////////////////////////*/
+/* ///////////////////// TABLA ////////////////////// */
+/*///////////////////////////////////////////////////*/
+
+#main{
+    display: flex;
+    flex-direction: row-reverse;
+    color:#deb420;
+    font-size: 20px;
+    width: auto;
+    height: auto;
+}
+
+#main table{
+    text-align: center;
+}
+
+
+#main table img{
+     margin-top: 20px;
+     width: 50%;
+     border-top: 3px solid #261a03;
+}
+
+#main span{
+    position: absolute;
+    color: #deb420;
+}
+
+
+/*////////////////////////////////////////////////////////*/
+/*///////////////////////  PRODUCTO  ////////////////////*/
+/*//////////////////////////////////////////////////////*/
+
+#producto{
+    display: inline;
+    color: #deb420;
+    font-size: 20px;
+    width: auto;
+    height: auto;
+}
+
+#producto #info{
+    display: flex;
+}
+
+.detalles *{
+    margin-block-start: 10px;
+    margin-block-end: -5px;
+    margin-left: 25px;
+}
+
+#producto .detalles{
+    padding: 0px;
+    margin-block-end:15px;
+    margin-block-start: 0%;
+}
+
+
+#producto #info img{
+    width: 200px;
+}
+
+.img-cont{
+    text-align: center;
+    font-style: italic;
+}
+
+#producto span{
+    position: absolute;
+    font-size: 20px;
+    margin-left: 66px;
+    justify-content: baseline;
+}
+
+
+
+/*/////////////////////////////////////////////////////*/
+/* ////////////////// PIE DE PAGINA //////////////////*/
+/*///////////////////////////////////////////////////*/
+footer{
+    color:#261a03;
+    background:#deb420;
+    height: auto;
+    display: grid;
+    line-height: 50px;
+}
+
+.contacto{
+    display: flex;
+    margin-left: 25px;
+    font-size: 20px;
+    justify-content: flex-start;
+    align-items: flex-start;
+}
+
+.derechos{
+    text-align: center;
+    margin-top: -40px;
+    font-size: 25px;
+    color: #261a03;
+}

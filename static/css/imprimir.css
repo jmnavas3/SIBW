@@ -1,0 +1,171 @@
+body{
+    margin: auto;
+    width: 2480;
+    height: 3508;
+    transform: scale(1);
+}
+
+a:link{
+    text-decoration: none;
+}
+
+a > img{
+    width: 100%;
+}
+/*------------------------HEADER------------------------- */
+
+.header{
+    width: 100%;
+    border-bottom: 10px solid #261a03;
+    height: auto;
+    color: #261a03;
+    background-color: #deb420;
+    display: flex;
+}
+
+.imp-header{
+    width: 100%;
+    border-bottom: 5px solid #261a03;
+    height: auto;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+
+.logo{
+    width: 250px;
+    height: auto;
+}
+
+.cont-title{
+    margin-block: -50px;
+}
+
+.cont-title-menu{
+    width: auto;
+}
+
+.titulo{
+    font-style: italic;
+    font-weight: bold;
+    font-size: 90px;
+}
+    /* OCULTAMOS EL MENU DEL HEADER */
+.menu li{
+    width: 100%;
+    margin-right: 50px;
+    font-size: 20px;
+    display: none;
+}
+
+/* /////////////CONTENIDO//////////////////// */
+.clearfix{
+    clear:both;
+}
+
+/* //////////////////LATERAL////////////////// */
+
+    /* OCULTAMOS LA BARRA LATERAR CON DISPLAY NONE */
+aside{
+    float:right;
+    display: none;
+    border-left: 4px solid #261a03;
+    width: 200px;
+    height: 100%;
+    padding: 0%;
+    color: #261a03;
+    margin: 0%;
+    background: #deb420;
+}
+
+aside h2{
+    margin-left: 10px;
+    margin-bottom: 5px;
+    font-size: 30px;
+}
+
+ul{
+    list-style: none outside none;
+}
+
+aside li p{
+    margin-left: -20px;
+    margin-block: 2px;
+    font-size: 25px;
+    color: #261a03;
+}
+aside li p:hover{background-color:#b5972d; color: white}
+
+.marcas{
+    display: flex;
+    flex-direction: column;
+    width: 60%;
+    margin-block: 0px;
+    margin-left: 10px;
+    margin-top: -40px;
+}
+
+/* //////////////////PRODUCTO////////////////// */
+
+#producto{
+    display: inline;
+    color: #261a03;
+    font-size: 20px;
+    width: auto;
+    height: auto;
+}
+
+#producto #info{
+    display: flex;
+    justify-content: space-around;
+}
+
+.detalles *{
+    margin-block-start: 10px;
+    margin-block-end: -5px;
+    margin-left: 25px;
+}
+
+#producto .detalles{
+    padding: 0px;
+    font-size: auto;
+    margin-block-end:0%;
+    margin-block-start: 0%;
+}
+
+
+#producto #info img{
+    width: 350px;
+    height: 350px;
+}
+
+.img-cont{
+    text-align: center;
+    font-style: italic;
+}
+
+#producto span{
+    position: absolute;
+    font-size: 20px;
+    margin-left: 66px;
+    color: #261a03;
+    justify-content: baseline;
+}
+/* //////////////////PIE DE PAGINA////////////////// */
+
+footer{
+    height: auto;
+}
+
+/* OCULTAMOS LAS REDES SOCIALES */
+.contacto{
+    display: none;
+    margin-right: 15px;
+    font-size: 20px;
+    justify-content: flex-end;
+}
+
+.derechos{
+    text-align: center;
+    font-size: 25px;
+}
