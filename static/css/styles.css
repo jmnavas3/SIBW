@@ -1,7 +1,8 @@
 body{
     margin: auto;
     transform: scale(1);
-    background-color: #150f05;
+    /* background-color: #150f05; */
+    background-color: #624207;
 }
 
 a:link{
@@ -9,6 +10,72 @@ a:link{
 }
 
 a:visited{ color: #261a03;}
+
+/*////////////////////////////////////////////////////////*/
+/*//////////////////// DESPLEGABLE //////////////////////*/
+/*//////////////////////////////////////////////////////*/
+
+#cont-desplegable{
+    display: grid;
+    justify-items: stretch;
+    margin: 5px;
+}
+
+#cont-desplegable #boton{
+    border:none;
+    font-weight: bold;
+    margin-top: 17%;
+    cursor: pointer;
+    font-size: 20px;
+    text-transform: uppercase;
+    background: #deb420;
+    border: 2px solid #261a03;
+    padding: 4px;
+    color: #261a03;
+}
+#cont-desplegable #boton:hover{background-color: #9b5252; color:aliceblue}
+
+#cont-desplegable #desplegable{
+    display:none;
+    font-size: 15px;
+    align-items: flex-end;
+    justify-content: space-around;
+    border: 2px solid #261a03;
+    background: #deb420;
+}
+
+#cont-desplegable #desplegable #datos{
+    color: #261a03;
+    align-self: flex-start;
+    font-weight: bold;
+}
+
+
+#cont-desplegable #desplegable #cont-comentarios{
+    display: flex;
+    flex-direction: column-reverse;
+}
+
+#cont-desplegable #desplegable #cont-comentario{
+    background-color: #bb954f;
+    border: 2px solid #9b5252;
+    color: #5e420d;
+    margin: 5px;
+    border-radius: 8px;
+    padding: 2px;
+}
+
+#cont-desplegable #desplegable #autor{
+    font-size: 14px;
+}
+
+#cont-desplegable #desplegable #fecha{
+    font-size: 12px;
+}
+
+textarea{
+    resize:vertical;
+}
 
 /*////////////////////////////////////////////////////*/
 /*//////////////////// HEADER ////////////////////// */
@@ -58,8 +125,8 @@ a:visited{ color: #261a03;}
 
 aside{
     float:right;
-    border-left: 4px solid #261a03;
-    border-bottom: 4px solid #261a03;
+    border-left: 4px solid #624207;
+    border-bottom: 4px solid #624207;
     width: 200px;
     height: auto;
     color: #261a03;
