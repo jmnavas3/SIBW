@@ -4,6 +4,7 @@
         <meta charset="utf-8" />
         <title>P1</title>
         <link rel="stylesheet" href="static/css/styles.css" />
+        <script defer src="static/js/formulario.js"></script>
     </head>
     <body>
         <!---------------------HEADER--------------------->
@@ -81,6 +82,40 @@
                     <p><small>vista frontal</small></p>
                     <img src="static/image/producto2.jpg" alt="rathbone espalda"/>
                     <p><small>vista trasera</small></p>
+                </div>
+            </div>
+            <!-- BARRA DESPLEGABLE (PRACTICA 2) -->
+            <div id="cont-desplegable">
+                <button id="boton">Comentarios</button>
+                <div id="desplegable">
+                    <!-- COMENTARIOS ANTERIORES -->
+                    <div id="cont-comentarios">
+                        <!-- comentario 1 -->
+                        <div id="cont-comentario">
+                            <h3 id="autor">Jose Navas</h3>
+                            <h3 id="fecha">04/03/2022</h3>
+                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Corporis quae unde debitis culpa voluptates quidem.</p>
+                        </div>
+                        <!-- comentario 2 -->
+                        <div id="cont-comentario">
+                            <h3 id="autor">Margarita Nuñez</h3>
+                            <h3 id="fecha">16/03/2022</h3>
+                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Corporis quae unde debitis culpa voluptates quidem Lorem ipsum dolor sit amet, consectetur adipisicing elit. Numquam expedita tempore dignissimos dolor quae ratione eligendi deserunt molestiae tempora beatae..</p>
+                        </div>
+                    </div>
+
+                    <form id="datos" onsubmit="return false">
+                        <h2>Nuevo comentario</h2>
+                        <label for="nombre">Nombre:</label><br>
+                        <input type="text" id="nombre" name="nombre" placeholder="Nombre"><br>
+                        <div id="cont-email">
+                            <label for="email">E-mail</label><br>
+                            <input type="text" id="email" name="email" placeholder="correo@example.com"><br><br>
+                        </div>
+                        <label for="comentario">Texto:</label><br>
+                        <textarea id="comentario" name="comentario" rows="4" cols="25" onkeypress="revisarComentario()" placeholder="Escribir comentario..."></textarea>
+                        <input type="submit" id="submit" value="Enviar" onsubmit="return nuevoComentario()">
+                    </form>
                 </div>
             </div>
         </div>
