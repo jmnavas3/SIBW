@@ -123,7 +123,7 @@ textarea{
 /* //////////////////// LATERAL //////////////////// */
 /*//////////////////////////////////////////////////*/
 
-aside{
+.lateral{
     float:right;
     border-left: 4px solid #624207;
     border-bottom: 4px solid #624207;
@@ -133,7 +133,7 @@ aside{
     background: #deb420;
 }
 
-aside h2{
+.lateral h2{
     margin-left: 10px;
     margin-bottom: 5px;
     font-size: 30px;
@@ -143,13 +143,13 @@ ul{
     list-style: none outside none;
 }
 
-aside li p{
+.lateral li p{
     margin-left: -20px;
     margin-block: 2px;
     font-size: 25px;
     color: #261a03;
 }
-aside li p:hover{background-color:#b5972d; color: white}
+.lateral li p:hover{background-color:#b5972d; color: white}
 
 .marcas img{
     width: 100%;
@@ -170,27 +170,27 @@ aside li p:hover{background-color:#b5972d; color: white}
 /* ///////////////////// TABLA ////////////////////// */
 /*///////////////////////////////////////////////////*/
 
-#main{
-    display: flex;
-    flex-direction: row-reverse;
+.main{
+    /* display: flex;
+    flex-direction: row-reverse; */
     color:#deb420;
     font-size: 20px;
     width: auto;
     height: auto;
 }
 
-#main table{
+.main .tabla{
     text-align: center;
 }
 
 
-#main table img{
+.main .tabla img{
      margin-top: 20px;
      width: 50%;
      border-top: 3px solid #261a03;
 }
 
-#main span{
+.main span{
     position: absolute;
     color: #deb420;
 }
@@ -200,15 +200,15 @@ aside li p:hover{background-color:#b5972d; color: white}
 /*///////////////////////  PRODUCTO  ////////////////////*/
 /*//////////////////////////////////////////////////////*/
 
-#producto{
-    display: inline;
+/* .main{
+    display: inline ;
     color: #deb420;
     font-size: 20px;
     width: auto;
     height: auto;
 }
-
-#producto #info{
+ */
+.main .info{
     display: flex;
 }
 
@@ -218,14 +218,14 @@ aside li p:hover{background-color:#b5972d; color: white}
     margin-left: 25px;
 }
 
-#producto .detalles{
+.main .detalles{
     padding: 0px;
     margin-block-end:15px;
     margin-block-start: 0%;
 }
 
 
-#producto #info img{
+.main .info img{
     width: 200px;
 }
 
@@ -234,7 +234,7 @@ aside li p:hover{background-color:#b5972d; color: white}
     font-style: italic;
 }
 
-#producto span{
+.main span{
     position: absolute;
     font-size: 20px;
     margin-left: 66px;
