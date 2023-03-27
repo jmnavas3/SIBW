@@ -1,0 +1,78 @@
+Se ha creado un usuario distinto al root tal y como se muestra en uno de los vídeos:
+CREATE USER 'jmnavas'@'%' IDENTIFIED BY 'jmnavas';
+CREATE DATABASE SIBW;
+USE DATABASE;
+GRANT create,delete,alter, ... ON SIBW.* TO 'jmnavas'@'%';
+mysql -h 127.0.0.1 -P 3306 -u jmnavas -p //inicio sesion como jmnavas. Contraseña:jmnavas
+
+////////////////////////////
+//-------------------------
+CREATE TABLE productos(
+  idP INT AUTO_INCREMENT PRIMARY KEY,
+  nombre VARCHAR(100),
+  marca VARCHAR(100),
+  precio DECIMAL(10,2),
+  descripcion TEXT,
+  img_link VARCHAR(100),
+);
+
+CREATE TABLE comentario{
+  idC INT AUTO_INCREMENT PRIMARY KEY,
+  idP INT NOT NULL,
+  user VARCHAR(50),
+  email VARCHAR(50),
+  fecha DATETIME,      //formato: 'YYYY-MM-DD HH:MM:SS'
+  coment VARCHAR(200)
+
+  FOREIGN KEY(idP) REFERENCES productos(idP)
+};
+
+CREATE TABLE prohibidas(
+    palabra VARCHAR(15) PRIMARY KEY
+);
+//-------------------------
+////////////////////////////
+
+INSERT INTO productos (nombre, marca, precio) VALUES ('nombre 1', 'Fender', '149.50');
+INSERT INTO productos (nombre, marca, precio) VALUES ('nombre 2', 'Alhambra', '240.25');
+INSERT INTO productos (nombre, marca, precio) VALUES ('nombre 3', 'RathBone', '173.50');
+INSERT INTO productos (nombre, marca, precio) VALUES ('nombre 4', 'Yamaha', '320.25');
+INSERT INTO productos (nombre, marca, precio) VALUES ('nombre 5', 'Ibanez', '859.50');
+INSERT INTO productos (nombre, marca, precio) VALUES ('nombre 6', 'Cordoba', '40.25');
+INSERT INTO productos (nombre, marca, precio) VALUES ('nombre 7', 'Fender', '749.50');
+INSERT INTO productos (nombre, marca, precio) VALUES ('nombre 8', 'Alhambra', '540.25');
+INSERT INTO productos (nombre, marca, precio) VALUES ('nombre 9', 'Fender', '249.50');
+
+
+INSERT INTO prohibidas VALUES ('profesor');
+INSERT INTO prohibidas VALUES ('maestro');
+INSERT INTO prohibidas VALUES ('caca');
+INSERT INTO prohibidas VALUES ('tonto');
+INSERT INTO prohibidas VALUES ('estupido');
+INSERT INTO prohibidas VALUES ('puto');
+INSERT INTO prohibidas VALUES ('puta');
+INSERT INTO prohibidas VALUES ('mierda');
+INSERT INTO prohibidas VALUES ('guarro');
+INSERT INTO prohibidas VALUES ('cabron');
+
+
+UPDATE productos SET img_link = 'fender' WHERE marca = 'Fender';
+UPDATE productos SET img_link = 'yamaha' WHERE marca = 'Yamaha';
+UPDATE productos SET img_link = 'alhambra' WHERE marca = 'Alhambra';
+UPDATE productos SET img_link = 'ibanez' WHERE marca = 'Ibanez';
+UPDATE productos SET img_link = 'cordoba' WHERE marca = 'Cordoba';
+
+UPDATE productos SET descripcion = 'Esta guitarra amplia sus propiedades con la electrónica Fishman
+mejorada con un tono robusto, cómodo y fácil de tocar, está lista para todo en casa o en el escenario.' WHERE marca = 'Fender';
+
+UPDATE productos SET descripcion = 'Guitarra electroacústica de caja estrecha diseñada para satisfacer
+esas necesidades de sonido tanto de los guitarristas como de las bandas en su conjunto.' WHERE marca = 'Yamaha';
+
+UPDATE productos SET descripcion = 'Este modelo tiene un diseño sencillo pero muy cuidado. Con su acabado satinado natural, los poros
+de la guitarra Alhambra-CE26 permanecen abiertos, lo que permite que el sonido de la guitarra tenga una gran resonancia.' WHERE marca = 'Alhambra';
+
+UPDATE productos SET descripcion = 'La guitarra acústica Ibanez Performance Series PF1512 Dreadnought de
+12 cuerdas ofrece características profesionales.' WHERE marca = 'Ibanez';
+
+UPDATE productos SET descripcion = 'Guitarra flamenca Made in Spain construída para los guitarristas que desean
+el tono brillante y percusivo de un sonido auténtico del flamenco.' WHERE marca = 'Cordoba';

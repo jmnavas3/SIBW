@@ -1,9 +1,17 @@
-var oculto = true;
-var prohibidas = /profesor|maestro|caca|tonto|estupido|puto|puta|mierda|guarro|cabron/gi;
 
-function revisarComentario(){
-    var comentario = document.getElementById("comentario");
-    comentario.value = comentario.value.replace(prohibidas, "*******");
+var oculto = true;
+var editar = true;
+// var prohibidas = /profesor|maestro|caca|tonto|estupido|puto|puta|mierda|guarro|cabron/gi;
+
+function revisarComentario(palabras){
+    var comentario = document.getElementById("comentario").value;
+    for(palabra of palabras){
+        if (comentario.match(palabra)){
+            console.log("censurado: " + palabra.length);
+            comentario = comentario.replace(palabra, "*".repeat(palabra.length));
+        }
+    }
+    document.getElementById("comentario").value = comentario;
 }
 
 function mostrarComentarios(){
@@ -18,13 +26,32 @@ function mostrarComentarios(){
     
     oculto = !oculto;
 }
+/* Función para mostrar el textArea para editar comentario */
+function editarComentario(num){
+    var css = document.getElementsByName("coment");
+    var conf = document.getElementsByName("confirm");
+    // console.log("tam: " + tam + "num: " + num);
+    // console.log(css[num]);
+    // console.log(conf[num]);
+
+    if(!editar){
+        css[num].style.display = "none";
+        conf[num].style.display = "none";
+    }
+    else{
+        css[num].style.display = "flex";
+        conf[num].style.display = "flex";
+    }
+
+    
+    editar = !editar;
+}
 /* Función para que los días y meses menores a 10 sean escritos con dos dígitos */
 function checkFecha(date){
     var formato = date;
     if (date<10){
         formato = "0"+date;
     }
-    console.log(formato);
     return formato;
 }
 /* REF: https://stackoverflow.com/questions/46155/whats-the-best-way-to-validate-an-email-address-in-javascript */
@@ -81,23 +108,29 @@ function nuevoComentario(){
     var fecha = dia + "/" + mes + "/" + date.getUTCFullYear(); //expr.regular para fecha
     date = fecha;
 
-    if ( !(nombre==="" || comentario==="" || email==="" )){
+    if ( !(comentario==="" || comentario===null )){
         if (validarEmail(email)){
-            document.getElementById("nombre").value = "";
-            document.getElementById("comentario").value = "";
-            document.getElementById("email").value = "";
+            // document.getElementById("nombre").value = "";
+            // document.getElementById("comentario").value = "";
+            // document.getElementById("email").value = "";
             
-            crearComentario(date,nombre,comentario);
+            // crearComentario(date,nombre,comentario);
+            console.log(nombre);
+            console.log(comentario);
+            console.log(email);
+            return true;
         }
         else
             alert("Email no válido");
     }
     else
         alert("Faltan campos por rellenar");
-    
+
+    console.log(nombre);
+    console.log(comentario);
+    console.log(email);
     return false;
 }
 
-document.getElementById("boton").addEventListener("click", mostrarComentarios);
-document.getElementById("comentario").addEventListener("change", revisarComentario);
-document.getElementById("submit").addEventListener("click", nuevoComentario);
+if(document.getElementById("boton") != null)
+    document.getElementById("boton").addEventListener("click", mostrarComentarios);
