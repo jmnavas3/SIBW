@@ -1,0 +1,27 @@
+{% extends "padre.html" %}
+
+    {% block central %}
+    <div style="margin-left: 15px; float: left;">
+        <h2>Tus datos</h2>
+        <p> {{ user.nombre }}</p>
+        <p> {{ user.email }}</p>
+        <p> {{ user.rol }}</p>
+        <p> {{ user.telefono }}</p>
+        <p> {{ user.fecha_registro }}</p>
+        <a class="datos" href="signup.php">Editar datos</a>
+        {% if user.rol == 'superusuario' %}
+        <a class="datos" href="roles.php">Editar roles</a>
+        {% endif %}
+        {% if user.rol == 'gestor' or user.rol == 'superusuario' %}
+        <br> <br>
+        <input type="hidden" name="buscar" id="buscar" value="" />
+        <input type="hidden" name="rol_usuario" id="rol_usuario" value="{{user.rol}}" />
+        <input class="datos" type="button" onclick="buscarProductos('{{user.rol}}')" value="Mostrar productos" />
+        <div id="busqueda">
+        </div>
+        {% endif %}
+    </div>
+    {% if user.rol == 'moderador' or user.rol == 'superusuario' %}
+    {% include 'comentario.html' %}
+    {% endif %}
+    {% endblock %}

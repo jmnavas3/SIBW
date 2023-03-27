@@ -1,0 +1,92 @@
+{% extends "padre.html" %}
+
+
+{% block titulo %}
+
+    {% if registrar is not defined %}
+    {{ producto.nombre }}
+    {% else %}
+    nuevo producto
+    {% endif %}
+
+{% endblock %}
+
+    
+{% block informacion %}
+<!-- MISMO PARA TODOS -->
+    <h2>Sobre el producto...</h2>
+    <ul>
+        <li><a href="https://www.musimaster.com/guitarras-electroacusticas/13245--rathbone-r3sbce-guitarra-acustica-electrificada-.html" target="_blank"><img src="static/icons/buy.png" /></a></li>
+        <li><a href="https://www.rathboneguitars.com/" target="_blank"><img src="static/icons/extern_link.png" /></li>
+        <li><a href="templates/imprimir.html" target="_self"><img src="static/icons/print.png" /></a></li>
+    </ul>
+    <h2>
+
+    {{ parent() }}
+{% endblock %}
+
+
+{% block central %}
+    {% if registrar is not defined %}
+        <div class="info">
+            {% if user.rol=='gestor' or user.rol=='superusuario' %}
+            <!-- BORRAR PRODUCTO -->
+            <form onsubmit="return true" action="producto.php" method="post">
+                <input type="hidden" name="borrar" value="true">
+                <input type="hidden" name="idP" value="{{ producto.idP }}">
+                <input type="submit" class="delete" value="Borrar">
+            </form>
+            {% endif %}
+            <div class="detalles"> <!-- INFO DEL PRODUCTO -->
+                <h1>{{ producto.nombre }}</h1>
+                <h2>{{ producto.marca }}</h2>
+                <h3>{{ producto.precio }}€</h3>
+                <p>{{ producto.descripcion }}</p>
+                <h4> Caracterísitcas</h4>
+                <ul>
+                    <li>Cuerpo: Gran-Auditorio</li>
+                    <li>Cutaway electroacústica</li>
+                    <li>Tapa maciza de abeto Englemann</li>
+                    <li>Parte trasera y laterales de Bocote</li>
+                    <li>Terminación en laca Brillo</li>
+                    <li>Ecualizador de 3 bandas con sintonizador</li>
+                    <li>Longitud de la escala: 25,5"/650 mm</li>
+                    <li>Longitud de guitarra: 41"/1041 mm</li>
+                </ul>
+            </div>
+            <div class="img-cont">  <!-- IMAGENES DE PRODUCTO -->
+                <img src="static/image/{{ producto.img_link }}.jpg" alt="imagen frontal"/>
+                <p><small>vista frontal</small></p>
+                <img src="static/image/{{ producto.img_link }}_2.jpg" alt="imagen trasera"/>
+                <p><small>vista trasera</small></p>
+            </div>
+        </div>
+        
+
+        {% if user %}
+        <!-- trasladado a comentario.html -->
+        {% include 'comentario.html' %}
+        {% endif %}
+    {% else %}
+    <!-- CREAR PRODUCTO NUEVO -->
+    <div class="alinear"> <!-- flexbox -->
+        <form action="producto.php" method="post">
+            <h3>Nombre producto</h3>
+            <input class="datos" type="text" maxlength="30" name="nombre" required/>
+            <h3>Marca</h3>
+            <input class="datos" type="text" maxlength="20" name="marca"  required/>
+            <h3>Precio</h3>
+            <input class="datos" type="number" max="1000"   name="precio" placeholder="min.50 €" min="50" required/>
+            <h3>Imagen</h3>
+            <label><small>(no incluir extension e.g: png, jpg, jpeg ...)</small></label> <br>
+            <input class="datos" type="text" maxlength="15" name="imagen" placeholder="nombre archivo" required/>
+            <h3>Descripcion</h3>
+            <textarea name="descripcion" cols="50" rows="10" placeholder="Descripcion del producto..." required></textarea><br>
+            <input id="submit" type="submit" name="save" value="Guardar" />
+        </form>
+    </div>
+    {% endif %}
+{% endblock %}
+
+
+

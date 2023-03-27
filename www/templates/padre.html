@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8" />
+        <title>
+            {% block titulo %}
+            Tremolo
+            {% endblock %}
+        </title>
+        <link rel="stylesheet" href="static/css/styles.css" />
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+        <script defer src="static/js/formulario.js"></script>
+        <script defer src="static/js/search.js"></script>
+    </head>
+    <body>
+        <!--------------------- HEADER --------------------->
+        <header class="header">
+            <a href="index.php"><img class="logo" src="static/image/guitar.png" alt="guitarra" /></a>
+            <div class="cont-title-menu">
+                <h1 class="titulo">Trémolo</h1>
+                <div class="menu">
+                    <ul>
+                        <li>Clásicas</li>
+                        <li>Accesorios</li>
+                        <li>Otros</li>
+                    </ul>
+                </div>
+            </div>
+            {% block registro %}
+            {% if not user %}
+            <div class="iniSesion">
+                <form action="login.php" method="post">
+                    <input class="datos" placeholder="Nombre" type="text" name="nick" /><br>
+                    <input class="datos" placeholder="Contraseña" type="password" name="contraseña" /><br>
+                    <input class="datos" type="submit" value="Iniciar sesion" />
+                    <a class="datos" href="signup.php">Registrarse</a>
+                </form>
+            </div>
+            {% else %}
+            <div class="iniSesion">
+                <p>Usuario: <strong>{{ user.nombre }}</strong> </p>
+                <p> <a class="datos" href="perfil.php"> Perfil</a></p>
+                <p> <a class="datos" href="logout.php"> Cerrar Sesión</a></p>
+            </div>
+            {% endif %}
+            {% endblock %}
+        </header>
+
+        <div class="clearfix"></div>
+        <div class="main">
+            <!------------------ BARRA LATERAL -------------------->
+            <div class="lateral">
+                <aside>
+                    {% block informacion %}
+                    <h2>Enlaces de interés</h2>
+                    <ul>
+                        <li><a href="http://www.musimaster.com/" target="_self"><p>Musimaster</p></a></li>
+                        <li><a href="http://www.ugr.es/" target="_self"><p>UGR</p></a></li>
+                        <li><a href="http://etsiit.ugr.es/" target="_self"><p>ETSIIT</p></a></li>
+                    </ul>
+                    <h2>Nuestras marcas</h2>
+                    <div class="marcas">
+                        <a target="_blank" href="https://www.ibanez.com/eu/"><img src="static/marcas/ibanez.jpg" alt="ibanez" /></a>
+                        <a target="_blank" href="https://www.alhambraguitarras.com/"><img src="static/marcas/guitarrasalhambra.png" alt="alhambra" /></a>
+                        <a target="_blank" href="https://es.yamaha.com/index.html"><img src="static/marcas/yamaha.jpg" alt="yamaha" /></a>
+                        <a target="_blank" href="https://www.rathboneguitars.com/"><img src="static/marcas/rathbone.jpg" alt="rathbone" /></a>
+                    </div>
+                    {% endblock %}
+                </aside>
+            </div>
+            <!---------------------- CONTENIDO----------------->
+            {% block central %}
+            {% endblock %}
+        </div>
+        
+        <div class="clearfix"></div>
+
+        <!---------------- PIE DE PAGINA ---------------------->
+        <footer>
+            <div class="contacto">
+                Contacto:
+                <a href="https://twitter.com/" target="_blank"><img src="static/icons/twitter.png" /></a>
+                <a href="https://www.facebook.com/" target="_blank"><img src="static/icons/facebook.png" /></a>
+                <a href="https://www.instagram.com/" target="_self"><img src="static/icons/instagram.png" /></a>
+                <a href="mailto:jmnavas@correo.ugr.es" target="_blank"><img src="static/icons/mail.png" /></a>
+            </div>
+            <div class="derechos">
+                <p>&copy; 2022 Trémolo - José María Navas Cabrera<br>jmnavas@correo.ugr.es</p>
+            </div>
+        </footer>
+    </body>
+</html>
