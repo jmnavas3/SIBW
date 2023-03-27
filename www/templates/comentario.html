@@ -1,0 +1,61 @@
+<div id="cont-desplegable">
+    <button id="boton">Comentarios</button>
+    <div id="desplegable">
+        <div id="cont-comentarios">
+            {% set contador = 0 %}
+            {% for comentario in comentarios %}
+            {% if user.rol == 'moderador' or user.rol == 'superusuario' %}
+            <!-- BORRAR COMENTARIO -->
+            <div>
+                <form onsubmit="return true" action="comentario.php" method="post">
+                    <input type="hidden" name="borrar" value="true">
+                    <input type="hidden" name="idC" value="{{ comentario.idC }}">
+                    <input type="hidden" name="idP" value="{{ comentario.idP }}">
+                    <input type="submit" class="delete" value="Borrar">
+                </form>
+                <button id="submit" onclick="editarComentario( {{contador}} )">Editar</button> <!-- pasamos como argumento el numero -->
+            </div>
+            {% endif %}
+            <div id="cont-comentario">
+                <h3 id="autor"> {{ comentario.nombre }} </h3>
+                <h3 id="fecha"> {{ comentario.fecha }} </h3>
+                <p> {{ comentario.opinion }} </p>
+                {% if perfil is defined %}
+                <p><small>producto: {{ comentario.idP }}</small></p> <!-- mostramos producto al que pertenece -->
+                {% endif %}
+                {% if comentario.idM != -1 %}
+                <p><i>Modificado por Moderador</i></p>
+                {% endif %}
+                <!-- FORMULARIO PARA EDITAR CADA COMENTARIO -->
+                    <form onsubmit="return true" action="comentario.php" method="post">
+                        <input type="hidden" name="editar" value="true">
+                        <input type="hidden" name="idC" value="{{ comentario.idC }}">
+                        <input type="hidden" name="idP" value="{{ comentario.idP }}">
+                        <textarea name="coment" id="coment" cols="30" rows="5"> {{ comentario.opinion }} </textarea>
+                        <input type="submit" id="coment" name="confirm" value="Confirmar">
+                    </form>
+            </div>
+            {% set contador = contador+1 %}
+            {% endfor %}
+        </div>
+
+        <!-- Si no aparece la variable perfil, mostramos la opcion de poner un nuevo comentario -->
+        {% if perfil is not defined %}
+        <form id="datos" onsubmit="return nuevoComentario()" action="comentario.php" method="POST">
+            <h2>Nuevo comentario</h2>
+            <label for="nombre">Nombre:</label><br>
+            <input type="text" id="nombre" name="nombre" placeholder="Nombre"><br>
+            <div id="cont-email">
+                <label for="email">E-mail</label><br>
+                <input type="text" id="email" name="email" placeholder="correo@example.com"><br><br>
+            </div>
+            <label for="comentario">Texto:</label><br>
+            <!-- {{ palabra|json_encode }} : mandamos a la función la representación JSON del array de palabras prohibidas -->
+            <textarea id="comentario" name="comentario" rows="6" cols="30" onkeypress="revisarComentario( {{palabra|json_encode}} )" placeholder="Escribir comentario..."></textarea>
+            <input type="hidden" name="nombre" value="{{ user.nombre }}" />
+            <input type="hidden" name="idP" value="{{ producto.idP }}" />
+            <input type="submit" value="Enviar" />
+        </form>
+        {% endif %}
+    </div>
+</div>
